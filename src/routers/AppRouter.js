@@ -12,11 +12,11 @@ import ReservationsPage from '../components/ReservationsPage';
 import MembershipsPage from '../components/MembershipsPage';
 import CalendarPage from '../components/CalendarPage';
 import NotFoundPage from '../components/NotFoundPage';
-
+import {StickyContainer, Sticky} from 'react-sticky';
 export const history = createHistory(); 
 const AppRouter = () => (
     <Router history={history}>
-        <div> 
+        <StickyContainer> 
             <Header />
             <Menu />
             <Switch>
@@ -31,7 +31,7 @@ const AppRouter = () => (
                 {/*404, undefined routes!*/}
                 <Route component={NotFoundPage} />
             </Switch>
-        </div>
+        </StickyContainer>
     </Router>
 );
 

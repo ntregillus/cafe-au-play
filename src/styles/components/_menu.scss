@@ -1,0 +1,25 @@
+
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-shadow {
+    -webkit-box-shadow: 0 5px 5px #888888;
+    -moz-box-shadow: 0 5px 5px #888888;
+    box-shadow: 0 5px 5px #888888;
+    padding: 10px 10px 10px 0;
+    background: white;
+}
+
+.active-page {
+    font-weight: bold;
+}
+
+.menu__link {
+    text-transform: uppercase;
+    color: $dark-orange;
+    font-weight: bold;
+    text-decoration: none;
+}

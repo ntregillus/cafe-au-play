@@ -8,6 +8,12 @@
 .header__wrapper {
     display: flex;
 }
+
+.header__title {
+    color:white;
+    text-decoration: none;
+}
+
 .header__logo {
     content: url("/images/pinwheel.png");
     margin: 20px;

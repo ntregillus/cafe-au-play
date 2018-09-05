@@ -2,7 +2,7 @@ import React from 'react';
 
 const ServicesPage = () => (
     <div className="content">
-        Put location page stuff here
+        Put services page stuff here
     </div>
 );
 
