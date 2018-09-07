@@ -1,5 +1,4 @@
 import React from 'react';
-import Map from './Map';
 import Widget from './Widget';
 const LocationsPage = () => (
     <div>
@@ -10,9 +9,6 @@ const LocationsPage = () => (
             </Widget>
 
         </div>
-        <Map>
-            
-        </Map>
     </div>
 );
 

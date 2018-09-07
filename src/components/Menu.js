@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import { Sticky } from 'react-sticky';
+
 const Menu = () => (
     <Sticky topOffset={150}>{({ style }) => 
     <div  style={style} className="menu-shadow">

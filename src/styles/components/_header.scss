@@ -1,8 +1,12 @@
 .header {
     background-color: $dark-orange;
     color: white;
-    margin-bottom: $sm-size;
+    margin-bottom: 0;
     padding: $md-size 0;
+    .container {
+        background: $orange;
+        padding: 0;
+    }
 }
 
 .header__wrapper {

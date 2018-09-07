@@ -1,0 +1,18 @@
+.member-list {
+    display: flex;
+    flex-direction: column;
+}
+.team-member {
+    display: flex;
+    flex-direction: row;
+}
+.synopsis {
+    padding-left: 25px;
+    > p {
+        padding-top: 0;
+    }
+}
+.portrait {
+    border-radius: 50%;
+    align-self:flex-start;
+} 

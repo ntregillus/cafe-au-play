@@ -3,23 +3,27 @@
 .menu {
     display: flex;
     justify-content: space-between;
+    @media (max-width: $desktop-breakpoint) {
+        display: none;
+    }
 }
-
 .menu-shadow {
     -webkit-box-shadow: 0 5px 5px #888888;
     -moz-box-shadow: 0 5px 5px #888888;
     box-shadow: 0 5px 5px #888888;
-    padding: 10px 10px 10px 0;
     background: white;
+    .container {
+        box-shadow: 0;
+    }
 }
 
 .active-page {
     font-weight: bold;
+    color: $purple;
 }
 
 .menu__link {
     text-transform: uppercase;
     color: $dark-orange;
-    font-weight: bold;
     text-decoration: none;
 }

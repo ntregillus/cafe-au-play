@@ -3,5 +3,33 @@
 .container {
     max-width: 60rem;
     margin: 0 auto;
-    padding: 0 $md-size;
+    padding: $md-size;
+    background: white;
+    z-index: -100;
+}
+
+.container-shadow {
+    -webkit-box-shadow: 0 0 5px #888888;
+    -moz-box-shadow: 0 0 5px #888888;
+    box-shadow: 0 0 5px #888888;
+}
+
+.two-col {
+    display: flex;
+    justify-content: space-between;
+    
+    > div {
+        padding: 0 25px 0 25px;
+        width: 50%;
+
+    }
+
+    
+    @media (max-width: $desktop-breakpoint) {
+        display:inline;
+        > div {
+            padding: auto;
+            width: 100%;
+        }
+    }
 }

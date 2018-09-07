@@ -1,6 +1,5 @@
 import react from 'react';
 import {Link} from 'react-router-dom';
-import {Sticky} from 'react-sticky';
 const Header = () => (
     <header className="header" >
         <div className="container">
