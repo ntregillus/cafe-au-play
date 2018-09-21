@@ -7,7 +7,9 @@
   "scripts": {
     "serve": "live-server public",
     "build": "webpack",
-    "dev-server": "webpack-dev-server"
+    "api": "nodemon --inspect server/server.js",
+    "ui": "webpack-dev-server",
+    "dev-server": "concurrently -r \"yarn run api\" \"yarn run ui\" "
   },
   "dependencies": {
     "babel-cli": "6.24.1",
@@ -16,15 +18,19 @@
     "babel-plugin-transform-class-properties": "6.24.1",
     "babel-preset-env": "1.5.2",
     "babel-preset-react": "6.24.1",
+    "concurrently": "^4.0.1",
     "css-loader": "0.28.4",
     "dotenv": "^6.0.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "google-map-react": "^1.0.6",
+    "googleapis": "^33.0.0",
     "history": "^4.7.2",
     "live-server": "^1.2.0",
+    "moment": "^2.22.2",
     "node-sass": "4.5.3",
     "normalize.css": "7.0.0",
     "react": "^16.4.2",
+    "react-big-calendar": "^0.19.2",
     "react-dom": "16.0.0",
     "react-markdown": "^3.6.0",
     "react-parallax": "^1.8.0",

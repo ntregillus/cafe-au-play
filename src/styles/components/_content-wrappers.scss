@@ -7,6 +7,10 @@
     background: white;
     z-index: -100;
 }
+.calendar-container {
+    display: flex;
+    justify-content: center;
+}
 
 .container-shadow {
     -webkit-box-shadow: 0 0 5px #888888;
