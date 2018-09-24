@@ -3,6 +3,7 @@ import thunk from 'redux-thunk';
 
 import authReducer from '../reducers/auth';
 import eventReducer from '../reducers/events';
+import dateFilersReducer from '../reducers/dateFilters';
 import { LoadMonthsEvents } from '../actions/events';
 
 /// setting up fail over logic if we do not have the redux dev
@@ -18,10 +19,12 @@ export default () => {
     const store = createStore(
         combineReducers({
             auth: authReducer,
-            events: eventReducer
+            events: eventReducer,
+            dateFilters: dateFilersReducer
         }),
         composeEnhancers(applyMiddleware(thunk))
     );
-    store.dispatch(LoadMonthsEvents())
+    var initState = store.getState();
+    store.dispatch(LoadMonthsEvents(initState.dateFilters.startDate, initState.dateFilters.endDate));
     return store;
 };

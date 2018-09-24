@@ -13,17 +13,14 @@ class GoogleWrapper {
         const end = endDate.toISOString();
         return this.client.events.list({
             calendarId: process.env.GOOGLE_CALENDAR_ID,
-            minTime: start,
-            maxTime: end
+            timeMin: start,
+            timeMax: end,
+            singleEvents: true
         }).then((res => {
             const data = res.data.items.map((event, i) => {
                 if (event.status == 'cancelled'){
                     return null;
                 }
-                if(event.summary === 'Monthly La Leche League of Durango Meeting'){
-                    console.log('title ', event);
-                }
-
                 return {
                     index: i,
                     start: event.start.dateTime,

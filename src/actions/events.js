@@ -2,6 +2,7 @@ import * as actionTypes from '../reducers/events';
 import moment from 'moment';
 
 export const LoadMonthsEvents = (startDate, endDate) => {
+    
     const start = (startDate) ? moment(startDate).toISOString() : moment().startOf('month').toISOString();
     const end = (endDate) ? moment(endDate).toISOString() : moment().endOf('month').add(1, 'days').toISOString();
     return (dispatch) => {

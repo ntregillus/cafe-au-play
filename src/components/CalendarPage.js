@@ -15,8 +15,8 @@ const CalendarPage = (props) => (
                 events={props.events}
                 defaultDate={new Date()}
                 defaultView="month"
-                min={minTime}
-                max={maxTime}
+                min={props.start}
+                max={props.maxTime}
                 styles={{height: '25vh'}}
             > 
             </Calendar>
@@ -26,7 +26,9 @@ const CalendarPage = (props) => (
 
 const setStateToProp = (state) => {
     return {
-        events: state.events
+        events: state.events,
+        startDate: state.startDate,
+        endDate: state.endDate
     };
 }
 
